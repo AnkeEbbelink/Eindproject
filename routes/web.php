@@ -26,6 +26,8 @@ Route::get('/create', function () {
 
 });
 
+
+
 //Route::get('/', 'PagesController@home');
 //Route::get('/voorpagina','PagesController@voorpagina');
 //Route::get('/invoer', 'PagesController@invoer');
@@ -37,12 +39,13 @@ Route::get('/create', function () {
 //Route::get('/cats/{cat}/edit','CatsController@edit');
 //Route::patch('/cats/{cat}', 'CatsController@update');
 //Route::delete('/cats/{cat}', 'CatsController@destroy');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/users', 'UsersController');
+Route::resource('/users', 'UserController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 Auth::routes();
 

@@ -17,6 +17,32 @@ class CatsController extends Controller
     {
         return view('cats.create', compact('create'));
     }
+
+    public function show()
+    {
+        
+    }
+
+    
+    public function update($id)
+    {
+        $cat = \App\Cat::find($id);
+       
+        
+        $cat->name = request('name');
+        $cat->description = request('description');
+ 
+        $cat->save();
+ 
+        return redirect('/cats');
+    
+    }
+
+    public function destroy()
+    {
+       
+    }
+    
     
     public function store(Request $request)
     {
@@ -37,10 +63,7 @@ class CatsController extends Controller
         return view('cats.edit', compact('cat'));
     }
 
-    public function update()
-    {
-
-    }
+  
 
 
 

@@ -5,28 +5,26 @@
 
     <h1 class= "title">Wijzigen</h1>
 
-    <form>
-        <div class= "field">
-            <label class ="label" for="">Title</label>
+    <form method="POST" action="/cats/{{$cat->id}}">
+        {{ method_field('PATCH')}}
+        {{csrf_field()}}
+        <div class="form-group">
+                <label for="name">naam:</label>
+                <input type="name" class="form-control" id="name" placeholder="name" value="{{ $cat->name}}">
 
-            <div class= "control">
-                    <input type ="text" class="input" name="title" placeholder="Title">
             </div>
-        </div>
-
-        <div class= "field">
-                <label class ="label" for="description">Description</label>
+            <div class="form-group">
+                    <label for="description">description:</label>
+                    <input type="description" class="form-control" id="description" placeholder="description" value="{{ $cat->description}}">
     
-                <div class= "control">
-                        <textarea name ="text" class="textarea"></textarea>
-                </div>
-        </div>
 
-        <div class="field">
-            <div class="control">
-                <button type="submit" class="button is-link">update</button>
-            </div>
-        </div>
-
-    </form>
+        
+       
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form> 
 @endsection
+
+
+    
+     
+  
