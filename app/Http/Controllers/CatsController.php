@@ -15,7 +15,7 @@ class CatsController extends Controller
     
     public function create()
     {
-        return view('cats.create');
+        return view('cats.create', compact('create'));
     }
     
     public function store(Request $request)

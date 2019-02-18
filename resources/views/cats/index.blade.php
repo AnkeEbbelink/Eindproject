@@ -1,3 +1,7 @@
+@extends('layouts.footer')
+
+@section('content')
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,3 +25,5 @@
     </table>
     </body>
 </html>
+
+@endsection

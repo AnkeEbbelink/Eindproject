@@ -21,8 +21,9 @@ Route::get('/', function () {
 
 Route::resource('cats', 'CatsController');
 
-Route::get('binnen', function () {
-  return view('binnen');
+Route::get('/create', function () {
+  return view('cats.create');
+
 });
 
 //Route::get('/', 'PagesController@home');
