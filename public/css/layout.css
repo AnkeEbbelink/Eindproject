@@ -1,0 +1,85 @@
+ html, body {
+                
+                color: #636b6f;
+                font-family: 'Gruppo', 'Nunito';
+                font-weight: 200;
+                height: 100%;
+                margin: 0;
+                background-image: url("img/achter.png");
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color:#88de02;
+                
+               
+
+                
+                
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+                margin-top:30vw;
+                
+                
+            }
+
+            .title {
+                font-size: 4vw;
+                color:#148b00;
+                
+            }
+
+            .links > a {
+                color: #fff;
+                padding: 0 25px;
+                font-size: 1vw;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+
+            .bg {
+            /* The image used */
+            height: 100%;
+           
+            
+          
+            /* Center and scale the image nicely */
+          
+            }
+
+
+
+            .catimage{
+              
+    
+
+            }
