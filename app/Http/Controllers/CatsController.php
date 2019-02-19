@@ -18,9 +18,10 @@ class CatsController extends Controller
         return view('cats.create', compact('create'));
     }
 
-    public function show()
+    public function show(\App\Cat $cat)
     {
-        
+       
+        return view('cats.show', compact('cat'));  
     }
 
     public function edit($id)
