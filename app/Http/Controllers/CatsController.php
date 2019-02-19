@@ -23,24 +23,27 @@ class CatsController extends Controller
         
     }
 
+    public function edit($id)
+    {
+        $cat = \App\Cat::findOrFail($id);
+        return view('cats.edit', compact('cat'));
+    }
     
     public function update($id)
     {
-        $cat = \App\Cat::find($id);
-       
-        
+        $cat = \App\Cat::findOrFail($id);
         $cat->name = request('name');
         $cat->description = request('description');
- 
         $cat->save();
  
-        return redirect('/cats');
+        return redirect('/cats' );
     
     }
 
-    public function destroy()
+    public function destroy($id)
     {
-       
+     \App\Cat::findOrFail($id)->delete(); 
+     return redirect('/cats' );
     }
     
     
@@ -57,11 +60,7 @@ class CatsController extends Controller
        //return redirect('/cats');
     }
 
-    public function edit($id)
-    {
-        $cat = \App\cat::find($id);
-        return view('cats.edit', compact('cat'));
-    }
+    
 
   
 

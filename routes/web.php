@@ -28,6 +28,7 @@ Route::get('/create', function () {
 
 
 
+
 //Route::get('/', 'PagesController@home');
 //Route::get('/voorpagina','PagesController@voorpagina');
 //Route::get('/invoer', 'PagesController@invoer');

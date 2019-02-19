@@ -1,5 +1,4 @@
-<!-- <?php
-
+<?php
 namespace App\Http\Controllers\Auth;
 
 use App\User;
@@ -69,4 +68,4 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-} -->
+}
