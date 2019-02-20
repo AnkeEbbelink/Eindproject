@@ -2,12 +2,12 @@
 
 @section('content')
 
-
-        <h1 class="title">Cats</h1>
+<div class="container">
+        <h1 class="title">Overzicht katten</h1>
         <ul class="list-unstyled">
-  <div class="container">  
+   
         <tr>
-            <th>ID</th>
+            <th>id</th>
             <th>name</th>
             <th>Description</th>
         </tr>
@@ -17,6 +17,7 @@
             <a href="/cats/{{$cat ->id}}">
         
             {{ $cat->name}}
+            
         
             </a>
         </li>

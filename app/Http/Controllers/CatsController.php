@@ -10,12 +10,12 @@ class CatsController extends Controller
     {
       $cats = \App\Cat::all();
       
-     return view('cats.index', compact('cats'));
+        return view('cats.index', compact('cats'));
     }
     
     public function create()
     {
-        return view('cats.create', compact('create'));
+        return view('cats.create');
     }
 
     public function show(\App\Cat $cat)
@@ -24,41 +24,51 @@ class CatsController extends Controller
         return view('cats.show', compact('cat'));  
     }
 
-    public function edit($id)
+    public function edit(\App\Cat $cat)
     {
-        $cat = \App\Cat::findOrFail($id);
+        
+        
+       
         return view('cats.edit', compact('cat'));
+        
     }
     
     public function update($id)
     {
-        $cat = \App\Cat::findOrFail($id);
+       
+        
+        $cat = \App\Cat::find($id);
+        
         $cat->name = request('name');
         $cat->description = request('description');
+
         $cat->save();
  
-        return redirect('/cats' );
-    
+        
+        return redirect ('/cats');
+        
     }
 
-    public function destroy($id)
+    public function destroy(\App\Cat $cat)
     {
-     \App\Cat::findOrFail($id)->delete(); 
-     return redirect('/cats' );
+    
+        $cat->delete(); 
+        
+        return redirect('/cats');
     }
     
     
-    public function store(Request $request)
+    public function store()
     {
-        $cat = new \App\Cat;
+        
+        $cat = new \App\Cat();
 
-        $cat->name = $request->input('name');
-        $cat->description = $request->input('description');
+        $cat->name = request ('name');
+        $cat->description = request('description');
+
         $cat->save();
 
-        $cats = \App\Cat::all();
-        return view ('cats.index', ['cats' =>$cats]);
-       //return redirect('/cats');
+        return redirect ('/cats');
     }
 
     
