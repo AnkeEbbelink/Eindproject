@@ -41,6 +41,8 @@ class CatsController extends Controller
         
         $cat->name = request('name');
         $cat->description = request('description');
+        $cat->description = request('description');
+        
 
         $cat->save();
  
@@ -60,11 +62,13 @@ class CatsController extends Controller
     
     public function store()
     {
-        
+       
+
         $cat = new \App\Cat();
 
         $cat->name = request ('name');
         $cat->description = request('description');
+        
 
         $cat->save();
 
