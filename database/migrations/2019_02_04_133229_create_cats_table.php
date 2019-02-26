@@ -17,6 +17,8 @@ class CreateCatsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
+            $table->date('DateOfBirth');
+            $table->string('avatar')->default('default.jpg');
             $table->timestamps();
         });
     }

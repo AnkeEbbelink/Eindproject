@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Image;
 
 class CatsController extends Controller
 {
@@ -15,7 +16,24 @@ class CatsController extends Controller
     
     public function create()
     {
-        return view('cats.create');
+
+    return view('cats.create');
+    
+       
+    }
+
+    public function update_avatar(Request $_request)
+    {
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300, 300)->save (public_path('/img/avatars/' . $filename));
+
+            $cat = \App\Cat::cat();
+            $cat->avatar = $filename;
+            $cat->save();
+        }
+        return view('cats.show', compact('cat')); 
     }
 
     public function show(\App\Cat $cat)
@@ -41,7 +59,7 @@ class CatsController extends Controller
         
         $cat->name = request('name');
         $cat->description = request('description');
-        $cat->description = request('description');
+        $cat->DateOfBirth = request('DateOfBirth');
         
 
         $cat->save();
@@ -68,6 +86,8 @@ class CatsController extends Controller
 
         $cat->name = request ('name');
         $cat->description = request('description');
+        $cat->DateOfBirth = request('DateOfBirth');
+        $cat->avatar = request('avatar');
         
 
         $cat->save();

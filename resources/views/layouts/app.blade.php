@@ -81,11 +81,11 @@
                                 <div class="col-md-3">
                                     <div class="list-group">
                                         <a href="#" class="list-group-item list-group-item-action bg-dark text-muted">Menu </a>
-                                        <a href="http://eindproject.test/cats" class="list-group-item list-group-item-action" >Bezetting</a><br>
-                                        <a href="http://eindproject.test/create" class="list-group-item list-group-item-action">Toevoegen</a><br>
-                                        <a href="#" class="list-group-item list-group-item-action">Pension</a><br>
-                                        <a href="#" class="list-group-item list-group-item-action">Pleeggezin</a><br>
-                                        <a href="#" class="list-group-item list-group-item-action">Winkel</a><br>
+                                        <a href="http://eindproject.test/cats" class="list-group-item list-group-item-action" >Bezetting</a>
+                                        <a href="http://eindproject.test/create" class="list-group-item list-group-item-action">Toevoegen</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Pension</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Pleeggezin</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Winkel</a>
                                         
                                     </div>
                                 </div>

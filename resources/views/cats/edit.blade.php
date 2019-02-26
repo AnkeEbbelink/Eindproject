@@ -4,7 +4,7 @@
 @section('content')
 <br>
 <br>
-<br>
+
 
 <div class="container">
         <div class="row justify-content-center">
@@ -18,17 +18,23 @@
                                     {{ method_field('PATCH') }}
                                     @csrf
                                     <div class="form-group row">
-                                        <label for="naam" class="col-md-4 col-form-label text-md-right">{{ __('naam') }}</label>
+                                        <label for="naam" class="col-md-4 col-form-label text-md-right">{{ __('Naam') }}</label>
                                         <div class="col-md-6">
                                             <input type="name" class="form-control" name="name" placeholder="name" value="{{ $cat->name}}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="geslacht" class="col-md-4 col-form-label text-md-right">{{ __('geslacht') }}</label>
+                                        <label for="geslacht" class="col-md-4 col-form-label text-md-right">{{ __('Geslacht') }}</label>
                                         <div class="col-md-6">
                                             <input type="description" class="form-control" name="description" placeholder="description" value="{{ $cat->description}}">
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                            <label for="DateOfBirth" class="col-md-4 col-form-label text-md-right">{{ __('Geboortedatum') }}</label>
+                                            <div class="col-md-6">
+                                                <input type="DateOfBirth" class="form-control" name="DateOfBirth" placeholder="geboortedatum" value="{{ $cat->DateOfBirth}}">
+                                            </div>
+                                        </div>
                                     <div class="form-group row mb-0">
                                             <div class="col-md-8 offset-md-4">
                                                 <div class= "btn-group">
@@ -58,7 +64,7 @@
 </div>
 <BR>
     <BR>
-        <br>
+       
         
     
   

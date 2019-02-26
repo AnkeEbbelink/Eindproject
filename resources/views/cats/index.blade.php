@@ -1,7 +1,7 @@
 @extends('layouts.footer')
 
 @section('content')
-<br>
+
 <br>
 <br>
 <div class="container">
@@ -13,21 +13,24 @@
                             <div class="card-body">
      
                             <ul class="list-unstyled">
-   
+                            
                                 <tr>
-                                    <th>id</th>
-                                    <th>name</th>
-                                    <th>Description</th>
+                                    <td>id</td>
+                                    <td>name</td>
+                                    <td>Description</td>
                                 </tr>
                                 <br>
                             @foreach ($cats as $cat)
                             <li>
                                 <a href="/cats/{{$cat ->id}}">
         
-                                {{ $cat->name}}
+                                {{$cat->name}}
+                                
             
         
                                 </a>
+                                {{$cat->description}}
+                                {{$cat ->DateOfBirth}}
                             </li>
     
                             @endforeach
@@ -40,6 +43,6 @@
 </div>
 <br>
 <br>
-<br>
+
 @endsection
 

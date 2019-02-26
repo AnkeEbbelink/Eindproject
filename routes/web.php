@@ -26,6 +26,10 @@ Route::get('/create', function () {
 
 });
 
+Route::POST('create', 'CatsController@update_avatar');
+
+route::POST('upload', function(){echo 'hello';});
+
 
 
 
